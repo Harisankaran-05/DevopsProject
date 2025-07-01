@@ -1,0 +1,15 @@
+- name: Ensure Graphite is running
+  docker_container:
+    name: graphite
+    image: graphiteapp/graphite-statsd
+    state: started
+    ports:
+      - "80:80"
+
+- name: Start Grafana
+  docker_container:
+    name: grafana
+    image: grafana/grafana
+    state: started
+    ports:
+      - "3000:3000"

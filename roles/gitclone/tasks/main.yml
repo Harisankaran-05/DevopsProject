@@ -1,0 +1,6 @@
+- name: Clone local Git project repository
+  git:
+    repo: /home/hari/devopsProject/
+    dest: /home/hari/ci_cd_workspace
+    version: main
+    force: yes

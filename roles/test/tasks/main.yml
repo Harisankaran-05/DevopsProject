@@ -1,0 +1,4 @@
+- name: Run Unit Tests
+  shell: mvn test
+  args:
+    chdir: /home/hari/ci_cd_workspace

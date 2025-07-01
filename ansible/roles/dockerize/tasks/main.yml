@@ -1,0 +1,4 @@
+- name: Build Docker image using shell as fallback
+  shell: docker build -t grade-system:latest .
+  args:
+    chdir: /home/hari/Documents/dockerProject

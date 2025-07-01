@@ -1,0 +1,7 @@
+- name: Run Docker container
+  docker_container:
+    name: grade-system
+    image: grade-system:latest
+    state: started
+    ports:
+      - "8080:8080"

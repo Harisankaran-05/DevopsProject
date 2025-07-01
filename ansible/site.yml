@@ -1,0 +1,8 @@
+- name: Complete CI/CD Pipeline using Ansible
+  hosts: localhost
+  become: yes
+
+  roles:
+    - gitclone
+    - mavenbuild
+    - test       # ✅ Make sure this line is present

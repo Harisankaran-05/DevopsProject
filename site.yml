@@ -1,0 +1,14 @@
+---
+- name: Complete CI/CD Pipeline using Ansible
+  hosts: localhost
+  become: yes
+  vars_files:
+    - vars/global.yml
+
+  roles:
+    - role: gitclone      # Clone the latest code from Git
+    - role: mavenbuild    # Build project using Maven
+    - role: test          # Run JUnit tests
+    - role: dockerize     # Build Docker image
+    - role: deploy        # Deploy Docker container (Minikube/K8s or Docker)
+    - role: monitor       # Configure monitoring (Graphite, Grafana)

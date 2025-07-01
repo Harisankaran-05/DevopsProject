@@ -1,0 +1,4 @@
+- name: Build project with Maven
+  shell: mvn clean package -DskipTests
+  args:
+    chdir: /home/hari/ci_cd_workspace

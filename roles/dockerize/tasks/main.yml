@@ -1,0 +1,5 @@
+- name: Build Docker Image
+  docker_image:
+    path: /home/hari/ci_cd_workspace
+    name: grade-system
+    tag: latest
